@@ -137,7 +137,7 @@ SIP消息的地址信息是基于SIP通用资源定位标记(URL)定义的:
 \chapter{开源程序说明}
 \section{PJSIP}
 \subsection{PJSIP简介}
-PJSIP是一个用C语言编写的免费开源多媒体通信库，实现了基于标准的协议，如SIP，SDP，RTP，STUN，TURN和ICE。 它将信令协议（SIP）与丰富的多媒体框架和NAT遍历功能结合到高级API中，该API可移植，适用于从桌面，嵌入式系统到移动手持设备的几乎任何类型的系统。\cite{webster_pjsip}
+PJSIP\cite{webster_pjsip}是一个用C语言编写的免费开源多媒体通信库，实现了基于标准的协议，如SIP，SDP，RTP，STUN，TURN和ICE。 它将信令协议（SIP）与丰富的多媒体框架和NAT遍历功能结合到高级API中，该API可移植，适用于从桌面，嵌入式系统到移动手持设备的几乎任何类型的系统。
 
 PJSIP既紧凑又功能丰富。 它支持音频，视频，状态和即时消息，并具有丰富的文档。 PJSIP非常便携。 在移动设备上，它抽象出系统相关的功能，并且在许多情况下能够利用设备的本机多媒体功能。
 
@@ -236,10 +236,10 @@ PJSIP库框架如下图\ref{fig5}:
 
 \buptfigure[width=0.7\textwidth]{pictures/fig7.png}{软件注册界面}{fig7}
 
-\item 输入m，开始进行呼叫，然后输入IVR的SIP地址，命令为：sip:12345@10.105.242.72
+\item 输入m，开始进行呼叫，然后输入IVR的SIP地址，命令为：$sip:12345@10.105.242.72$
 \end{enumerate}
 
-注册过程如下(注意：根据语音提示，注意每一步输入数据时，都要先输入*键，然后才能输入有效数据。具体操作步骤如下：):
+注册过程如下(注意：根据语音提示，注意每一步输入数据时，都要先输入$*$键，然后才能输入有效数据。具体操作步骤如下：):
 
 \buptfigure[width=0.7\textwidth]{pictures/fig8.png}{软件注册过程}{fig8}
 
@@ -251,7 +251,7 @@ PJSIP库框架如下图\ref{fig5}:
 \subsection{测试录音以及回放}
 步骤与验证学号相似，不再说明
 
-\section{Wireshark抓包分析}
+\section{Wireshark\cite{wire_shark}抓包分析}
 \subsection{Wireshark准备工作}
 打开程序后，需要选定抓取数据的网卡，这里只有一个本地连接，默认选择后，点击Start开始进行抓包。如果不进行过滤的话，会把所有数据包都抓到，这样数据量太多，不易分析。需要在Filter添加过滤条件sip，以便方便查看我们需要得到的数据包，这样就过滤掉非sip的数据包。
 \subsection{Wireshark抓取并分析数据包}
@@ -293,7 +293,7 @@ PJSIP库框架如下图\ref{fig5}:
 
 \section{问题及解决方法}
 \subsection{输入超时}
-在刚开始直接输入数字及$\sharp$号键时，会出现无法识别输入，应该在输入前先输入$\ast$号键再回车得到有效输入，如下图:
+在刚开始直接输入数字及$\#$号键时，会出现无法识别输入，应该在输入前先输入$*$号键再回车得到有效输入，如下图:
 
 \buptfigure[width=0.7\textwidth]{pictures/fig16.png}{输入超时}{fig16}
 
